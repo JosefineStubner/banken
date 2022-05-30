@@ -56,6 +56,7 @@ loginForm.addEventListener("submit", async (e) => {
       pass: formPassword.value,
     }),
   });
+  location.reload();
 });
 
 const checkIfLoggedin = async () => {
@@ -178,5 +179,3 @@ const addButtonListeners = () => {
   );
   withdrawalBtns.forEach((btn) => btn.addEventListener("click", withdrawal));
 };
-
-// loadAccounts();
