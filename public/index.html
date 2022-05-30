@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banken</title>
+  </head>
+  <body>
+    <h1>Banken</h1>
+
+    <h2 id="welcomeUser"></h2>
+
+    <div id="bankuser">
+    <form id="createuser">
+      <h2>Skapa ny användare</h2>
+      <label for="username">Användarnamn</label>
+      <input type="text" id="username" name="username" />
+      <br />
+      <label for="password">Lösenord</label>
+      <input type="password" id="password" name="password" />
+      <br /><br />
+      <button>Spara</button>
+      <button type="reset">Avbryt</button>
+    </form>
+    <br />
+    <h2>Logga in</h2>
+    <form id="login">
+      <label for="user">Användarnamn:</label>
+      <input type="text" id="user" name="user" />
+      <br />
+      <label for="pass">Lösenord:</label>
+      <input type="password" id="pass" name="pass" />
+      <br /><br />
+      <button>Logga in</button>
+    </form>
+    <br />
+  </div>
+    <form id="logout">
+      <button>Logga ut</button>
+    </form>
+
+    <br /><br /><br />
+    <div id="bankinfo">
+    <h1>Bankkonton</h1>
+    <form id="createaccount">
+      <h2>Skapa nytt konto</h2>
+      <label for="name">Kontonamn</label>
+      <input type="text" id="name" name="name" />
+      <br />
+      <label for="balance">Saldo</label>
+      <input type="text" id="balance" name="balance" />
+      <br /><br />
+      <button>Spara</button>
+      <button type="reset">Avbryt</button>
+    </form>
+    <h2>Konton</h2>
+    <!-- <ul id="accounts">
+    
+  </ul> -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>Kontonummer</th>
+          <th>Namn</th>
+          <th>Saldo</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="accounts"></tbody>
+    </table>
+  </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
