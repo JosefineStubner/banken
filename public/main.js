@@ -7,6 +7,7 @@ const formPassword = document.getElementById("pass");
 const createUserForm = document.getElementById("createuser");
 const userName = document.getElementById("username");
 const userPassword = document.getElementById("password");
+const userCreated = document.getElementById("created");
 const welcomeMessage = document.getElementById("welcomeUser");
 const bankUser = document.getElementById("bankuser");
 const bankInfo = document.getElementById("bankinfo");
@@ -55,8 +56,6 @@ loginForm.addEventListener("submit", async (e) => {
       pass: formPassword.value,
     }),
   });
-  location.reload();
-  console.log("You are logged in");
 });
 
 const checkIfLoggedin = async () => {
@@ -81,7 +80,6 @@ logoutForm.addEventListener("submit", async (e) => {
   await fetch("/logout", { method: "POST" });
 
   location.reload();
-  console.log("You are logged out");
 });
 
 createUserForm.addEventListener("submit", async (e) => {
@@ -97,8 +95,8 @@ createUserForm.addEventListener("submit", async (e) => {
       pass: userPassword.value,
     }),
   });
-  location.reload();
-  console.log("user created");
+  createUserForm.reset();
+  userCreated.innerText = "Användare skapad! Vänligen logga in.";
 });
 
 createAccount.addEventListener("submit", async (e) => {
