@@ -46,7 +46,7 @@ const accountTemplate = (account) => `
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  await fetch("/login", {
+  let response = await fetch("/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +56,15 @@ loginForm.addEventListener("submit", async (e) => {
       pass: formPassword.value,
     }),
   });
-  location.reload();
+  console.log(response);
+
+  if (response.status === 200) {
+    location.reload();
+  } else {
+    alert("Du har angett fel användarnamn eller lösenord. Vänligen försök igen");
+
+    location.reload();
+  }
 });
 
 const checkIfLoggedin = async () => {
